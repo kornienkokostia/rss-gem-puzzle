@@ -49,7 +49,9 @@ const onMenuBtnClick = () => {
         if (document.querySelector('.menu-btn-block').classList.contains('menu-open')) {
             onPauseBtnClick()
         } else {
-            onResumeBtnClick()
+            if (document.querySelector('.main-wrapper').getAttribute('isWon') === "no") {
+                onResumeBtnClick()
+            }
         }
     }
 }

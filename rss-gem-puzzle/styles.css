@@ -32,32 +32,6 @@ body, html{
     background-color: #000000;
 }
 
-@media (min-height: 745px) {
-    /* body .main-wrapper{
-        width: 780px;
-        height: 100%;
-    }
-    .main-wrapper .header{
-        width: 780px;
-        height: 21vh;
-        row-gap: 3.3vh;
-    }
-    .main-wrapper .header-buttons{
-        height: 7.3vh;
-        width: 780px;
-        column-gap: 3.7vh;
-    }
-    .main-wrapper .game-btn{
-        font-size: 2.5vh;
-    }
-    .main-wrapper .btn-icon{
-        height: 2vh;
-    }
-    .main-wrapper .resume-btn{
-        display: none;
-    } */
-}
-
 @media (max-width: 745px), (min-height: 745px)  {
     .main-wrapper .header{
         width: 100%;
@@ -82,7 +56,144 @@ body, html{
     .main-wrapper .footer{
         display: none;
     }
+    .main-wrapper .blur-bg{
+        width: 66vh;
+        height: 69vh;
+        transform: translateY(12vh);
+    }
+    .main-wrapper .blur-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .main-wrapper .results-popup{
+        width: 65vh;
+        height: 72vh;
+        z-index: 4;
+        top: 0; 
+        bottom: 0; 
+        margin-top: auto; 
+        margin-bottom: 3.9vh; 
+    }
+    .main-wrapper .results-visible{
+        animation: results-open .45s ease-in-out;
+        will-change: transform;
+        transition: .45s;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0.3vh) scale(1.005);
+    }
+    .main-wrapper .results-hidden{
+        transition: .45s;
+        visibility: hidden;
+        opacity: 0;
+    }
 }
+@media (max-width: 425px) {
+    .main-wrapper .header{
+        width: 100%;
+        height: 43vh;
+        row-gap: 3.3vh;
+    }
+    .main-wrapper .header-buttons{
+        height: 17.6vh;
+        width: 42.5vh;
+        column-gap: 3vh;
+        row-gap: 3vh;
+    }
+    .main-wrapper .game-field{
+        width: 50vh;
+        height: 50vh;
+    }    
+    .main-wrapper .blur-bg{
+        width: 50vh;
+        height: 50vh;
+        transform: translateY(18vh);
+    }
+    .main-wrapper .blur-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .main-wrapper .congrats-popup{
+        width: 40vh;
+        height: 27vh;
+    }
+    .congrats-message-block{
+        width: calc(100% - 6vh);
+        height: 72%;
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+    .congrats-buttons-block{
+        width: 100%;
+        height: 28%;
+        display: flex;
+    }
+    .main-wrapper .congrats-btn{
+        width: 100%;
+        font-family: SF-Pro-Display-Light;
+        font-size: 2.7vh;
+    }
+    .main-wrapper .congrats-title{
+        font-size: 3vh;
+    }
+    .main-wrapper .congrats-message{
+        font-size: 2.2vh;
+    }
+    .main-wrapper .congrats-question{
+        font-size: 2.2vh;
+    }
+    .main-wrapper .results-popup{
+        width: 50vh;
+        height: 63vh;
+        margin-top: auto; 
+        margin-bottom: 7.3vh; 
+    }    
+}
+@media (max-width: 415px) and (min-height: 700px) {
+    .main-wrapper .header{
+        width: 100%;
+        height: 53vh;
+        row-gap: 8vh;
+    }
+    .main-wrapper .game-field{
+        width: 40vh;
+        height: 40vh;
+    }    
+    .main-wrapper .blur-bg{
+        width: 40vh;
+        height: 40vh;
+        transform: translateY(25vh);
+    }
+    .main-wrapper .results-popup{
+        width: 40vh;
+        height: 55vh;
+        margin-top: auto; 
+        margin-bottom: 7.3vh; 
+    }    
+    .main-wrapper .results-block{
+        width: calc(100% - 5vh);
+        margin: 0 2.5vh 2.5vh;
+    }
+    .main-wrapper .results-block-titles{
+        width: calc(100% - 5vh);
+    }
+    .main-wrapper .header-buttons{
+        height: 17.6vh;
+        width: 40vh;
+        margin-top: 8vh;
+    }
+    .main-wrapper .mobile-menu-title{
+        font-size: 4.3vh;
+    }
+    .main-wrapper .congrats-popup{
+        width: 40.05vh;
+        height: 27vh;
+    }
+    .main-wrapper .congrats-btn:hover{
+        background-color: transparent;
+    }
+}
+
 
 
 .main{
@@ -257,7 +368,7 @@ body, html{
     width: 47vh;
     height: 30vh;
     background-color: var(--grey);
-    z-index: 10;
+    z-index: 6;
     top: 0; 
     bottom: 0; 
     margin-top: auto; 

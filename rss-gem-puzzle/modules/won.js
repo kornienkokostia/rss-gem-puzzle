@@ -8,7 +8,7 @@ const checkIfWon = () => {
     soretedArr.push(soretedArr.shift())
 
     const rand = Math.floor(Math.random() * (3 - 0 + 1)) + 0
-    if (/*rand === 2*/JSON.stringify(currentArr) === JSON.stringify(soretedArr)) {
+    if (rand === 2/*JSON.stringify(currentArr) === JSON.stringify(soretedArr)*/) {
         addResult()
         document.querySelector('.main-wrapper').setAttribute('isWon', "yes")
         document.querySelector('.results-block').scrollTo({ top: document.querySelector('.results-block').scrollHeight, 
