@@ -33,6 +33,9 @@ body, html{
 }
 
 @media (max-width: 745px), (min-height: 745px)  {
+    .main-wrapper .mobile-menu{
+        display: flex;
+    }
     .main-wrapper .header{
         width: 100%;
         height: 31.5vh;
@@ -88,68 +91,8 @@ body, html{
         opacity: 0;
     }
 }
-@media (max-width: 425px) {
-    .main-wrapper .header{
-        width: 100%;
-        height: 43vh;
-        row-gap: 3.3vh;
-    }
-    .main-wrapper .header-buttons{
-        height: 17.6vh;
-        width: 42.5vh;
-        column-gap: 3vh;
-        row-gap: 3vh;
-    }
-    .main-wrapper .game-field{
-        width: 50vh;
-        height: 50vh;
-    }    
-    .main-wrapper .blur-bg{
-        width: 50vh;
-        height: 50vh;
-        transform: translateY(18vh);
-    }
-    .main-wrapper .blur-visible{
-        opacity: 1;
-        visibility: visible;
-    }
-    .main-wrapper .congrats-popup{
-        width: 40vh;
-        height: 27vh;
-    }
-    .congrats-message-block{
-        width: calc(100% - 6vh);
-        height: 72%;
-        padding-left: 3vh;
-        padding-right: 3vh;
-    }
-    .congrats-buttons-block{
-        width: 100%;
-        height: 28%;
-        display: flex;
-    }
-    .main-wrapper .congrats-btn{
-        width: 100%;
-        font-family: SF-Pro-Display-Light;
-        font-size: 2.7vh;
-    }
-    .main-wrapper .congrats-title{
-        font-size: 3vh;
-    }
-    .main-wrapper .congrats-message{
-        font-size: 2.2vh;
-    }
-    .main-wrapper .congrats-question{
-        font-size: 2.2vh;
-    }
-    .main-wrapper .results-popup{
-        width: 50vh;
-        height: 63vh;
-        margin-top: auto; 
-        margin-bottom: 7.3vh; 
-    }    
-}
-@media (max-width: 415px) and (min-height: 700px) {
+
+@media (max-width: 425px) and (min-height: 700px), (max-width: 425px) {
     .main-wrapper .header{
         width: 100%;
         height: 53vh;
@@ -191,6 +134,9 @@ body, html{
     }
     .main-wrapper .congrats-btn:hover{
         background-color: transparent;
+    }
+    .main-wrapper .puzzle-piece{
+        font-size: 3.8vh;
     }
 }
 
@@ -616,6 +562,7 @@ body, html{
 
 .mobile-menu{
     position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -652,6 +599,11 @@ body, html{
 }
 .mobile-menu-choose-size-menu > .size-menu-item{
     font-size: 4vh;
+    color: #e4e4e4;
+}
+.mobile-menu-choose-size-menu > .size-menu-item:hover{
+    font-size: 4vh;
+    color: #ffffff;
 }
 .mobile-menu.mobile-menu-opened .mobile-menu-choose-size-menu{
     visibility: visible;
