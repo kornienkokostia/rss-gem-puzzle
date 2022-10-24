@@ -226,14 +226,14 @@ if (window.innerWidth < 415 || window.innerHeight > 700) {
     fieldSizeVh = 40
 }
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth < 425) {
-        fieldSizeVh = 50
-    }
-    if (window.innerWidth < 415 || window.innerHeight > 700) {
-        fieldSizeVh = 40
-    }
-})
+// window.addEventListener('resize', () => {
+//     if (window.innerWidth < 425) {
+//         fieldSizeVh = 50
+//     }
+//     if (window.innerWidth < 415 || window.innerHeight > 700) {
+//         fieldSizeVh = 40
+//     }
+// })
 
 export {onStartBtnClick, onPauseBtnClick, onResumeBtnClick, turnOffFieldClick, turnOnFieldClick, onItemsMove,
     onItemsDrag, onPlayAudioBtnClick}

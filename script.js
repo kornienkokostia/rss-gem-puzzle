@@ -7,7 +7,8 @@ import { onCongratsCancelBtnClick, onCongratsPopupYesBtnClick } from "./modules/
 
 createDOM()
 
-const footerMenuItems = [...document.querySelectorAll('.size-menu-item')]
+const footerMenuItems = [...document.querySelectorAll('.size-menu-item')].splice(6)
+const footerMenuItemsMobile = [...document.querySelectorAll('.size-menu-item')].splice(0, 6)
 
 if (localStorage.getItem('gameField')) {
     document.querySelector('.game-field').innerHTML = localStorage.getItem('gameField')
@@ -24,8 +25,7 @@ if (localStorage.getItem('gameField')) {
     onSizeClick(footerMenuItems[Number(localStorage.getItem('fieldSize'))-3])
     if (document.querySelector('.results-block').scrollHeight > document.querySelector('.results-block').clientHeight) {
         document.querySelector('.results-block-titles-wrapper').classList.add('results-block-scroll-margin')
-    }
-    
+    }   
 }
 
 document.querySelector('.start-btn').addEventListener('click', onStartBtnClick)
@@ -39,4 +39,4 @@ document.querySelector('.save-btn').addEventListener('click', saveGame)
 document.querySelector('.play-audio-block').addEventListener('click', onPlayAudioBtnClick)
 document.querySelector('.menu-btn-block').addEventListener('click', onMenuBtnClick)
 footerMenuItems.map(el => {el.addEventListener('click', () => {onSizeClick(el)})})
-
+footerMenuItemsMobile.map(el => el.addEventListener('click', onMenuBtnClick))

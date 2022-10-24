@@ -4,7 +4,6 @@ const onSizeClick = (el) => {
     const footerMenuSeparators = [...document.querySelectorAll('.size-menu-separator')]
     const footerMenuItems = [...document.querySelectorAll('.size-menu-item')].splice(6)
     const footerMenuItemsMobile = [...document.querySelectorAll('.size-menu-item')].splice(0, 6)
-    footerMenuItemsMobile.map(el => el.addEventListener('click', onMenuBtnClick))
     footerMenuSeparators.map(el => el.classList.remove('separator-hidden'))
     if (el === footerMenuItems[0] || el === footerMenuItemsMobile[0]) {
         document.querySelector('.size-menu-current').style.transform = 'translateX(calc(0vh))'
