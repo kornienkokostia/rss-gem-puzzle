@@ -219,21 +219,24 @@ audio.src = `./assets/sounds/on-piece-move.wav`
 let playAudio = false
 let fieldSizeVh = 65
 
-if (window.innerWidth < 425) {
-    fieldSizeVh = 50
-}
-if (window.innerWidth < 415 || window.innerHeight > 700) {
+if (window.innerWidth < 415 && window.innerHeight > 700) {
     fieldSizeVh = 40
 }
+if (window.innerWidth >= 425 && window.innerHeight <= 700) {
+    fieldSizeVh = 65
+}
 
-// window.addEventListener('resize', () => {
-//     if (window.innerWidth < 425) {
-//         fieldSizeVh = 50
-//     }
-//     if (window.innerWidth < 415 || window.innerHeight > 700) {
-//         fieldSizeVh = 40
-//     }
-// })
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 415 && window.innerHeight > 700) {
+        fieldSizeVh = 40
+    } 
+    if (window.innerWidth >= 425 && window.innerHeight <= 700) {
+        fieldSizeVh = 65
+    }
+    if (window.innerWidth >= 745 && window.innerHeight <= 700) {
+        document.querySelector('.mobile-menu').classList.remove('mobile-menu-opened')
+    }
+})
 
 export {onStartBtnClick, onPauseBtnClick, onResumeBtnClick, turnOffFieldClick, turnOnFieldClick, onItemsMove,
     onItemsDrag, onPlayAudioBtnClick}

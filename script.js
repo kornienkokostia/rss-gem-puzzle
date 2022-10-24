@@ -7,7 +7,7 @@ import { onCongratsCancelBtnClick, onCongratsPopupYesBtnClick } from "./modules/
 
 createDOM()
 
-const footerMenuItems = [...document.querySelectorAll('.size-menu-item')].splice(6)
+const footerMenuItems = [...document.querySelectorAll('.size-menu-item')]
 const footerMenuItemsMobile = [...document.querySelectorAll('.size-menu-item')].splice(0, 6)
 
 if (localStorage.getItem('gameField')) {
