@@ -138,6 +138,21 @@ body, html{
     .main-wrapper .puzzle-piece{
         font-size: 3.8vh;
     }
+    .main-wrapper .congrats-title{
+        font-size: 3.2vh;
+        margin-bottom: 1vh;
+        margin-top: 3vh;
+    }
+    .main-wrapper .congrats-message{
+        font-size: 2.3vh;
+        text-align: center;
+    }
+    .main-wrapper .congrats-question{
+        font-family: SF-Pro-Display-Light;
+        font-size: 2.3vh;
+        text-align: center;
+    }
+    
 }
 
 
