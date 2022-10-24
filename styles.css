@@ -514,6 +514,7 @@ body, html{
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .audio-on{
