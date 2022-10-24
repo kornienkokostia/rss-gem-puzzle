@@ -226,8 +226,6 @@ if ((window.innerWidth >= 425 && window.innerHeight <= 700) || window.innerWidth
     fieldSizeVh = 65
 }
 
-console.log(fieldSizeVh)
-
 window.addEventListener('resize', () => {
     if ((window.innerWidth < 425 && window.innerHeight > 700) || window.innerWidth < 425) {
         fieldSizeVh = 40
