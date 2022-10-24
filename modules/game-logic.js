@@ -219,18 +219,20 @@ audio.src = `./assets/sounds/on-piece-move.wav`
 let playAudio = false
 let fieldSizeVh = 65
 
-if (window.innerWidth < 415 && window.innerHeight > 700) {
+if ((window.innerWidth < 425 && window.innerHeight > 700) || window.innerWidth < 425) {
     fieldSizeVh = 40
 }
-if (window.innerWidth >= 425 && window.innerHeight <= 700) {
+if ((window.innerWidth >= 425 && window.innerHeight <= 700) || window.innerWidth >= 425) {
     fieldSizeVh = 65
 }
 
+console.log(fieldSizeVh)
+
 window.addEventListener('resize', () => {
-    if (window.innerWidth < 415 && window.innerHeight > 700) {
+    if ((window.innerWidth < 425 && window.innerHeight > 700) || window.innerWidth < 425) {
         fieldSizeVh = 40
-    } 
-    if (window.innerWidth >= 425 && window.innerHeight <= 700) {
+    }
+    if ((window.innerWidth >= 425 && window.innerHeight <= 700) || window.innerWidth >= 425) {
         fieldSizeVh = 65
     }
     if (window.innerWidth >= 745 && window.innerHeight <= 700) {
