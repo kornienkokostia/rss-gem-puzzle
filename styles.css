@@ -651,7 +651,7 @@ body, html{
     font-size: 5vh;
     border-radius: 1vh;
     user-select: none;
-    transition: transform .5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition: transform .4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 .empty-piece{
     border-radius: 1vh;
