@@ -37,7 +37,7 @@ const onItemsMove = () => {
                     piecesArr = [...document.querySelectorAll('.piece')]  
                     turnOnFieldClick()
                     checkIfWon()               
-                }, 500)
+                }, 400)
             }
             if (clickedPiece === emptyPiece + 1) {
                 increaseMovesCount()
@@ -52,7 +52,7 @@ const onItemsMove = () => {
                     piecesArr = [...document.querySelectorAll('.piece')]  
                     turnOnFieldClick()  
                     checkIfWon()                          
-                }, 500)
+                }, 400)
             }
             if (emptyPiece === clickedPiece + fieldSize) {
                 increaseMovesCount()
@@ -68,7 +68,7 @@ const onItemsMove = () => {
                     piecesArr = [...document.querySelectorAll('.piece')]  
                     turnOnFieldClick()
                     checkIfWon()      
-                }, 500)
+                }, 400)
             }
             if (emptyPiece === clickedPiece - fieldSize) {
                 increaseMovesCount()
@@ -84,7 +84,7 @@ const onItemsMove = () => {
                     piecesArr = [...document.querySelectorAll('.piece')]  
                     turnOnFieldClick() 
                     checkIfWon()     
-                }, 500)
+                }, 400)
             }
             piecesArr = [...document.querySelectorAll('.piece')]
         })
