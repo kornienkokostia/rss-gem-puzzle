@@ -124,37 +124,37 @@ const onItemsDrag = () => {
         
         if (draggedPiece === emptyPiece - 1) {
             increaseMovesCount()
-            checkIfWon() 
             playAudio ? audio.play() : false
             piecesArr[emptyPiece].before(piecesArr[emptyPiece], piecesArr[draggedPiece])
             piecesArr = [...document.querySelectorAll('.piece')]
             emptyPiece = piecesArr.indexOf(document.querySelector('.empty-piece'))
+            checkIfWon() 
         }
         if (draggedPiece === emptyPiece + 1) {
             increaseMovesCount()
-            checkIfWon() 
             playAudio ? audio.play() : false
             piecesArr[draggedPiece].before(piecesArr[draggedPiece], piecesArr[emptyPiece])
             piecesArr = [...document.querySelectorAll('.piece')] 
-            emptyPiece = piecesArr.indexOf(document.querySelector('.empty-piece')) 
+            emptyPiece = piecesArr.indexOf(document.querySelector('.empty-piece'))
+            checkIfWon() 
         }
         if (emptyPiece === draggedPiece + fieldSize) {
             increaseMovesCount()
-            checkIfWon() 
             playAudio ? audio.play() : false
             piecesArr[draggedPiece].before(piecesArr[emptyPiece])
             piecesArr[emptyPiece - 1].after(piecesArr[draggedPiece])
             piecesArr = [...document.querySelectorAll('.piece')]  
             emptyPiece = piecesArr.indexOf(document.querySelector('.empty-piece'))
+            checkIfWon() 
         }
         if (emptyPiece === draggedPiece - fieldSize) {
             increaseMovesCount()
-            checkIfWon() 
             playAudio ? audio.play() : false
             piecesArr[emptyPiece].before(piecesArr[draggedPiece])
             piecesArr[draggedPiece - 1].after(piecesArr[emptyPiece])
             piecesArr = [...document.querySelectorAll('.piece')]  
             emptyPiece = piecesArr.indexOf(document.querySelector('.empty-piece'))
+            checkIfWon() 
         }
         return false;
     }
