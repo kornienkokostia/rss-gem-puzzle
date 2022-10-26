@@ -32,10 +32,6 @@ const solvableArr = (n) => {
         nums.add(Math.floor(Math.random() * n * n - 1) + 1);
     }
     const resArr = [...nums]
-    console.log('arr:', resArr)
-    console.log('0 pos:', findXPosition(resArr, n))
-    console.log('invertions:', getInvCount(resArr, n))
-    console.log('solvable:', isSolvable(resArr, n))
     if (!isSolvable(resArr, n)) {
         return solvableArr(n)
     } else {
