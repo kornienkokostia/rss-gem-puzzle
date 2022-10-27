@@ -25,6 +25,7 @@ const checkIfWon = () => {
         document.querySelector('.start-btn').setAttribute('disabled', "true")
         document.querySelector('.results-btn').setAttribute('disabled', "true")
         document.querySelector('.save-btn').setAttribute('disabled', true)
+        localStorage.setItem('results', document.querySelector('.results-block').innerHTML)
         onPauseBtnClick()
     }
     
