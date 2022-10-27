@@ -3,7 +3,6 @@ const setLocalStorage = () => {
     localStorage.setItem('moves', document.querySelector('.moves-counter').innerHTML)
     localStorage.setItem('time', document.querySelector('.time-counter').innerHTML)
     localStorage.setItem('fieldSize', Math.sqrt([...document.querySelectorAll('.piece')].length))
-    localStorage.setItem('results', document.querySelector('.results-block').innerHTML)
 }
 
 const saveGame = () => {
