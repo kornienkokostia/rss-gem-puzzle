@@ -22,7 +22,7 @@ if (localStorage.getItem('gameField')) {
     onPauseBtnClick()
     onItemsMove()
     onItemsDrag()
-    onSizeClick(footerMenuItems[Number(localStorage.getItem('fieldSize'))-3])
+    onSizeClick(footerMenuItems[Number(localStorage.getItem('fieldSize'))-3], true)
     if (document.querySelector('.results-block').scrollHeight > document.querySelector('.results-block').clientHeight) {
         document.querySelector('.results-block-titles-wrapper').classList.add('results-block-scroll-margin')
     }   
@@ -38,5 +38,5 @@ document.querySelector('.congrats-cancel').addEventListener('click', onCongratsC
 document.querySelector('.save-btn').addEventListener('click', saveGame)
 document.querySelector('.play-audio-block').addEventListener('click', onPlayAudioBtnClick)
 document.querySelector('.menu-btn-block').addEventListener('click', onMenuBtnClick)
-footerMenuItems.map(el => {el.addEventListener('click', () => {onSizeClick(el)})})
+footerMenuItems.map(el => {el.addEventListener('click', () => {onSizeClick(el, false)})})
 footerMenuItemsMobile.map(el => el.addEventListener('click', onMenuBtnClick))
